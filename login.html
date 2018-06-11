@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var passwordPairs = {
+		  "sarahford": "password",
+		  "sford85": "password2"
+		}
+
+		function check(form) {
+		  if (passwordPairs[form.userid.value] === form.pswrd.value)
+		  { 
+		    window.open('target.html');
+		    alert("success");
+		    return false;
+		  }
+		}
+	</script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+			body {
+			  background-color: #FAFAFA;
+			  color: #DCDCDC;
+			  font-family: Open Sans;
+			  margin-top: 30px;
+			}
+
+			.login-box {
+			  margin-top: 100px;
+			  width: 370px;
+			  height: 380px;
+			  margin: 0 auto;
+			  background-color: white;
+			  padding: 40px; 
+
+			}
+
+			.logo {
+			  height: 50px;
+			  margin-left: 60px;
+			  margin-top: -20px;
+			  margin-bottom: 30px;
+			}
+			.form-control {
+			  margin-bottom: 20px;
+			}
+			.btn {
+			  width: 100%;
+			  font-size: 16px;
+			}
+			.sub-content {
+			  width: 370px;
+			  height: 40%;
+			  margin: 5px auto;
+			  border: 1px solid #e6e6e6;
+			  padding: 20px 50px;
+			  color: #111;
+			  background-color: #fff;
+			}
+			.s-part {
+			  text-align: center;
+			  font-family: Open Sans;
+			  font-weight: normal;
+			}
+
+			.s-part a {
+			  text-decoration: none;
+			  cursor: pointer;
+			  color: #3897f0;
+			  font-family: Open Sans;
+			  font-weight: normal;
+			}
+			.bgcolor {
+			   background: 	#fafafa;
+			   font-size: 12px;
+			}
+			
+			.or_text{
+				margin-left: 130px;
+				color: #444;
+				margin-bottom: 50px;
+			}
+			.fb_text{
+				color: #444;
+				margin-top: 30px;
+				margin-left: 50px;
+			}
+
+
+
+	</style>
+  <title>Login page</title>
+</head>
+
+<body>
+  <div class="well login-box center-block">
+    <img class="logo" src="http://www.dallasarboretum.org/assets/img/instagram-word.png"></img>
+    <form name="login" style="margin-bottom: 20px;">
+
+      <input type="text" class="form-control bgcolor" placeholder="Phone number, username, or email" name="userid" />
+
+      <input type="password" class="form-control bgcolor" id="pass" placeholder="Password" name="pswrd" />
+
+      <input class="btn btn-primary" type="button" onclick="check(this.form)" value="Log in" />
+  </form>
+  <span class="or_text">OR</span><br/>
+  <div class="fb_text">
+  	  <img style="height: 15px; width: 15px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/1000px-F_icon.svg.png"></img> <span>Log in with Facebook</span>
+  </div>
+  </div>
+  <div class="sub-content">
+    <div class="s-part">
+      Don't have an account?<a href="#"> Sign up</a>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
